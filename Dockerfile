@@ -70,4 +70,4 @@ WORKDIR /container/bin
 ENTRYPOINT ["dart"]
 
 # Change this to your starting dart.
-CMD ["chartclient.dart"]
+CMD ["dartchat.dart"]
