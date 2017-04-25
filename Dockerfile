@@ -11,11 +11,15 @@ MAINTAINER Nane Kratzke <nane@nkode.io>
 # Install Dart SDK. Do not touch this until you know what you are doing.
 # We do not install darteditor nor dartium because this is a server container.
 # See: http://askubuntu.com/questions/377233/how-to-install-google-dart-in-ubuntu
+RUN apt-get dist-upgrade -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 RUN apt-get update
-RUN apt-get install -y software-properties-common python-software-properties
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common
+RUN apt-get install -y python-software-properties
 RUN apt-add-repository ppa:hachre/dart
-RUN apt-get -y update
+RUN apt-get update
 RUN apt-get install -y dartsdk
+
 
 # Install the dart server app. 
 # Comment in necessary parts of your dart package necessary to run "pub build"
