@@ -2,10 +2,10 @@
 # Dartchat will be exposed via HTTP on port 3000.
 #
 # This file is hosted on github. Therefore you can start it in docker like this:
-# > docker build -t dartchat github.com/nkratzke/dartchat
+# > docker build -t dartchat github.com/anmunoz/dartchatv2
 # > docker run -p 8080:3000 -d dartchat
 
-FROM stackbrew/ubuntu:13.10
+FROM ubuntu:14.04.5
 MAINTAINER Nane Kratzke <nane@nkode.io>
 
 # Install Dart SDK. Do not touch this until you know what you are doing.
